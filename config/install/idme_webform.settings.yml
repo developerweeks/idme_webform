@@ -1,0 +1,18 @@
+client_id: 'YourKeyHere'
+idme_domain: ''
+openid_policy: ''
+endpoint: ''
+pii_filter:
+  fname: 'fname'
+  lname: 0
+  email: 0
+  zip: 0
+  age: 0
+  birth_date: 0
+  social: 0
+  street: 0
+  city: 0
+  state: 0
+  phone: 0
+attributes: ''
+scope: ''

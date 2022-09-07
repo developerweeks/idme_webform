@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Hooks and alterations for IDme Webform integration.
+ */
+
+/**
+ * Implements hook_cron().
+ *
+ * All cron hooks are called on all cron runs.
+ * Cron hooks are expected to use Drupal::state to keep track of their own schedules.
+ */
+function idme_webform_cron() {
+  $completed = \Drupal::state()->get('idme_webform.last_cron', 0);
+  $today = date("m/d/Y");
+
+  if ($completed == $today) {
+    // Already ran today, move on.
+    return;
+  }
+  \Drupal::state()->set('idme_webform.last_cron', $today);
+
+  // Clear out the old PII.
+  \Drupal::service('idme_webform.petard')->outdated();
+}

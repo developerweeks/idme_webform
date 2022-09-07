@@ -1,0 +1,7 @@
+idme_webform.settings:
+  path: '/admin/config/system/idme'
+  defaults:
+    _form: '\Drupal\idme_webform\Form\IDmeSettings'
+    _title: 'IDme Configuration'
+  requirements:
+    _permission: 'administer site configuration'

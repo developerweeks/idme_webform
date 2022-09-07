@@ -1,0 +1,12 @@
+# Define a new asset library which includes the CSS used to style the widget.
+# Indicate dependencies.
+idmewidget:
+  version: 1.x
+  css:
+    theme:
+      css/idme.css: {}
+  js:
+    js/idme.js: {}
+  dependencies:    
+    - core/jquery
+    - core/jquery.form

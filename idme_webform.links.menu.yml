@@ -1,0 +1,5 @@
+idme_webform.settings:
+  title: 'IDme Settings'
+  route_name: idme_webform.settings
+  parent: system.admin_config_system
+  description: "Configure IDme account and protocol seetings."

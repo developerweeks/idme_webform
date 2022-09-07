@@ -1,0 +1,4 @@
+services:
+  idme_webform.petard:
+    class: Drupal\idme_webform\Petard
+    arguments: ['@database', '@request_stack']
